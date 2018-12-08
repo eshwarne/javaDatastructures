@@ -1,7 +1,8 @@
 /*
  *AUTHOR : Eshwar.S
  *Stack is an abstract linear data structure, that supports push, pop and seek operations
- *Stack is very useful for storing data which are accessed in a FILO and LIFO manner*/
+ *Stack is very useful for storing data which are accessed in a FILO and LIFO manner
+ *All the operations are O(1) time complexity except for the print method*/
 package stackds;
 import stackds.Stack;
 public class Main {
