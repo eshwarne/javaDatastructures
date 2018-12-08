@@ -1,3 +1,7 @@
+/*
+ *AUTHOR : Eshwar.S
+ *Stack is an abstract linear data structure, that supports push, pop and seek operations
+ *Stack is very useful for storing data which are accessed in a FILO and LIFO manner*/
 package stackds;
 import stackds.Stack;
 public class Main {
@@ -8,5 +12,12 @@ public class Main {
 		s1.print();
 		System.out.println();
 		System.out.println(s1.seek());
+		System.out.println(s1.pop());
+		s1.pop();
+		s1.pop();
+		
+		//returns error, stack is empty
+		System.out.println(s1.pop());
+		
 	}
 }

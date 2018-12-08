@@ -23,14 +23,14 @@ public class Stack {
 	public int pop() {
 		try {
 			if(this.top==-1) {
-				throw new Exception("ERROR");
+				throw new Exception("ERROR, STACK UNDERFLOW, CONISDER A PUSH OPERATION");
 			}
 			int popped=this.stack[top];
 			this.top--;
 			return popped;
 		}
 		catch(Exception e) {
-			System.out.println(e.getStackTrace());
+			System.out.println(e.getMessage());
 		}
 		return -1;
 		
