@@ -20,6 +20,21 @@ public class Stack {
 			stack[top]=a;
 		}
 	}
+	public int pop() {
+		try {
+			if(this.top==-1) {
+				throw new Exception("ERROR");
+			}
+			int popped=this.stack[top];
+			this.top--;
+			return popped;
+		}
+		catch(Exception e) {
+			System.out.println(e.getStackTrace());
+		}
+		return -1;
+		
+	}
 	//function to return the top element
 	public int seek() {
 		return this.top==-1?-1: top;
