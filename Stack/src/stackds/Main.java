@@ -16,7 +16,6 @@ public class Main {
 		System.out.println(s1.pop());
 		s1.pop();
 		s1.pop();
-		
 		//returns error, stack is empty
 		System.out.println(s1.pop());
 		
