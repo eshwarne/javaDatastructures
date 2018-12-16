@@ -86,4 +86,32 @@ public class BinarySearchTree {
 		}
 		return temp;
 	}
+	public void delete(int value) {
+		boolean isLeft=true;
+		Node before=this.root;
+		Node temp=this.root;
+		while(temp!=null) {
+			if(temp.value==value) {
+				break;
+			}
+			before=temp;
+			if(value>temp.value) {
+				isLeft=false;
+				temp=temp.right;
+			}
+			else if(value<temp.value) {
+				isLeft=true;
+				temp=temp.left;
+			}
+		}
+		if(temp==null) {
+			System.out.println("ELEMENT NOT PRESENT");
+			return;
+		}
+		if(temp.right==null && temp.left==null) {
+			if(isLeft) before.left=null;
+			else if(!isLeft) before.right=null;
+			temp=null;
+		}
+	}
 }

@@ -17,5 +17,8 @@ public class Main {
 		System.out.println(bst.findMinimum().value);
 		System.out.println("MAXIMUM VALUE");
 		System.out.println(bst.findMaximum().value);
+		bst.delete(99);
+		bst.delete(11);
+		System.out.println(bst.findMaximum().value);
 	}
 }
