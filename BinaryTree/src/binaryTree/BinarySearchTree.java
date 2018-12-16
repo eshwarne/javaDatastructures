@@ -117,7 +117,7 @@ public class BinarySearchTree {
 		else if(temp.right==null || temp.left==null) {
 			before.left=temp.left;
 			temp=null;
-			return
+			return;
 		}
 	}
 }
