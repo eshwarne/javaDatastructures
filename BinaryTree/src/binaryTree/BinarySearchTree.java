@@ -112,6 +112,12 @@ public class BinarySearchTree {
 			if(isLeft) before.left=null;
 			else if(!isLeft) before.right=null;
 			temp=null;
+			return;
+		}
+		else if(temp.right==null || temp.left==null) {
+			before.left=temp.left;
+			temp=null;
+			return
 		}
 	}
 }
