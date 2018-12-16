@@ -1,7 +1,7 @@
 package binaryTree;
 import binaryTree.Node;
 public class BinarySearchTree {
-	private Node root;
+	public Node root;
 	private int noOfNodes;
 	public BinarySearchTree(int value) {
 		this.noOfNodes++;
@@ -11,7 +11,7 @@ public class BinarySearchTree {
 	public void insert(int value) {
 		Node temp=this.root;
 		while(temp!=null) {
-			if(value>this.root.value) {
+			if(value>temp.value) {
 				if(temp.right==null) {
 					temp.right=new Node(value);
 					this.noOfNodes++;
@@ -27,6 +27,34 @@ public class BinarySearchTree {
 				}
 				temp=temp.left;
 			}
+		}
+	}
+	public void inOrderTraverse(Node x) {
+		if(x==null) {
+			return;
+		}
+		else {
+			inOrderTraverse(x.left);
+			System.out.println(x.value);
+			inOrderTraverse(x.right);
+			return;
+		}
+	}
+	public void preOrderTraverse(Node x) {
+		if(x==null) return;
+		else {
+			System.out.println(x.value);
+			preOrderTraverse(x.left);
+			preOrderTraverse(x.right);
+			return;
+		}
+	}
+	public void postOrderTraverse(Node x) {
+		if(x==null) return;
+		else {
+			postOrderTraverse(x.left);
+			postOrderTraverse(x.right);
+			System.out.println(x.value);
 		}
 	}
 }
