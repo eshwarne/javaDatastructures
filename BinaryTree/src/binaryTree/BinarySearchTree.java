@@ -57,4 +57,33 @@ public class BinarySearchTree {
 			System.out.println(x.value);
 		}
 	}
+	public Node findNode(int value) {
+		Node temp=this.root;
+		while(temp!=null) {
+			if(value>temp.value) {
+				temp=temp.right;
+			}
+			else if(value<temp.value) {
+				temp=temp.left;
+			}
+			else if(value==temp.value) {
+				return temp;
+			}
+		}
+		return null;
+	}
+	public Node findMinimum() {
+		Node temp=this.root;
+		while(temp.left!=null) {
+			temp=temp.left;
+		}
+		return temp;
+	}
+	public Node findMaximum() {
+		Node temp=this.root;
+		while(temp.right!=null) {
+			temp=temp.right;
+		}
+		return temp;
+	}
 }

@@ -11,5 +11,11 @@ public class Main {
 		bst.postOrderTraverse(bst.root);
 		System.out.println();
 		bst.preOrderTraverse(bst.root);
+		System.out.println("SEARCHING:");
+		System.out.println(bst.findNode(11).value);
+		System.out.println("MINIMUM VALUE:");
+		System.out.println(bst.findMinimum().value);
+		System.out.println("MAXIMUM VALUE");
+		System.out.println(bst.findMaximum().value);
 	}
 }
