@@ -32,6 +32,11 @@ public class Queue<T> {
 		len++;
 	}
 	public T dequeue() {
-		
+		if(len==0) return null;
+		len--;
+		QueueNode<T> node=this.head;
+		this.head=node.next;
+		T val=node.value;
+		return val;
 	}
 }
