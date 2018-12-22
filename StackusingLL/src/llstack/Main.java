@@ -10,11 +10,14 @@ public class Main {
 //		System.out.println(s.pop());
 //		System.out.println(s.pop());
 		
+		
+		//String
 		Stack<String> s=new Stack<String>("Eshwar");
 		s.push("NE");
 		System.out.println(s.seek());
 		System.out.println(s.pop());
 		System.out.println(s.pop());
 		System.out.println(s.pop());
+		
 	}
 }
